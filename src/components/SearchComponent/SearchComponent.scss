@@ -1,0 +1,83 @@
+.container-search {
+	margin-bottom: 10vh;
+
+	.header-search {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		h1 {
+			font-family: "Gloria Hallelujah", cursive;
+			text-align: center;
+			font-weight: bolder;
+			font-size: 50px;
+			text-transform: uppercase;
+			color: rgb(173, 30, 97);
+			text-shadow: 5px 5px 15px rgba(104, 36, 47, 0.849);
+		}
+
+		.header-image {
+			max-width: 100%;
+		}
+	}
+
+	.wrap-search {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.button-search {
+		height: 40px;
+		width: 120px;
+		margin: 50px;
+		background-color: rgb(173, 30, 97);
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+		box-shadow: 5px 5px 35px rgba(104, 36, 47, 0.849);
+
+		@media not all and (hover: none) {
+			&:hover {
+				background-color: rgb(126, 9, 64);
+			}
+		}
+	}
+
+	input {
+		width: 150px;
+	}
+
+	.rs-wraper,
+	.rs-header,
+	.rs-toggle {
+		box-shadow: 5px 5px 35px rgba(104, 36, 47, 0.349);
+		border-radius: 10px !important;
+	}
+
+	.rs-header .rs-toggle .rs-selection {
+		font-size: 20px;
+	}
+
+	.rs-searchable {
+		margin: 10px;
+	}
+
+	#searchable,
+	.rs-body .rs-option {
+		font-size: 20px;
+		color: rgb(173, 30, 97);
+	}
+}
+
+@media (max-width: 1150px) {
+	.container-search .header-search h1 {
+		font-size: 25px;
+	}
+}
+
+@media (max-width: 850px) {
+	.container-search .wrap-search {
+		flex-direction: column;
+	}
+}
