@@ -43,7 +43,7 @@ class MainLayout extends Component {
     }
 
     handleChange = e => {
-        console.log(e.target)
+        // console.log(e.target)
         // console.log(e.target.value)
         // console.log(e.target.type)
         // console.log(e.target.name)
@@ -70,8 +70,10 @@ class MainLayout extends Component {
             <div className="main-component">
                 <SearchComponent onChange={e => this.handleChange(e)} 
                 onSubmit={e => { this.buttonHandle(e) }} />
+                    {/* <div className="background-list"> */}
                 <TabsList tabsList={this.state.tabsList} />
                 <div className="logo"><h3>© bio8oid</h3></div>
+                {/* </div> */}
             </div>
         );
     }

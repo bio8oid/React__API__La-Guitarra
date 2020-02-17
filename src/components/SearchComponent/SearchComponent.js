@@ -65,15 +65,15 @@ class SearchComponent extends Component {
         // )
         return (
             <div className="container-search">
-                <div className="header-search">
-                    <img alt="left" className="header-image" src="./images/jane-left.png" />
-                    <h1>find something yummy <br />with jane the piglet</h1>
-                    <img alt="right" className="header-image" src="./images/jane-right.png" />
+                <div className="header-search">   
+                <h1>The hands find the way to do what the heart wants to say</h1>
+                <p>- Paco de Lucia -</p>              
+                    {/* <img alt="hero" className="header-image" src="./images/paco.webp" /> */}
                 </div>
                 <div className="wrap-search">
                     <form onSubmit={this.props.onSubmit}>
                         <label>
-                            <input id="data-input" name="inputData" type="text" placeholder="Enter SONG or BAND name" autoComplete="on" onChange={this.props.onChange} />
+                            <input id="data-input" name="inputData" type="text" placeholder="Song title or artist" autoComplete="on" onChange={this.props.onChange} />
                         </label>
                         <label>
                             <select id="form-tabs" defaultValue="PLAYER" name="dropdownData" onChange={this.props.onChange}>

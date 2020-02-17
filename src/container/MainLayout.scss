@@ -1,12 +1,51 @@
+// @import "../styles/variables.scss";
+
+// $buttons-color: #49425d;
+// $buttons-shadow: #49425d;
+// $hover: #49425d;
+// $titles: #49425d;
+
+// $font-merida: "Merienda One", cursive;
+
+// $phone: "(max-width: 367px)";
+// $tablet: "(max-width: 768px)";
+// $desktop: "(max-width: 960px)";
+// $desktopHD: "(min-width: 1400px)";
+
+@import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merienda+One|Pacifico&display=swap');
+
 body {
 	margin: 0;
 	background: radial-gradient(
 		circle,
-		rgba(255, 253, 219, 1) 0%,
-		rgba(251, 237, 213, 1) 50%,
-		rgba(232, 200, 212, 1) 100%
-	);
-}
+		#190c25 0%,
+		#312946 0%,
+		#0a0313 40%
+		);
+	// background: radial-gradient(
+	// 	circle,
+	// 	rgb(25, 12, 37) 0%,
+	// 	rgb(62, 47, 105) 20%,
+	// 	rgb(10, 3, 19) 40%
+	// 	);
+		// height: 3000px;
+		// background: url('../assets/images/backlist.webp') center;
+		
+	}
+	
+	// .main-component {
+		// margin-top: 30vh;
+		// 	background: url('../assets/images/backlist.webp');
+	// z-index: 3;
+	// margin-top: 675px;
+	// height: 100vh;
+// }
+
+// .background-list {
+// 	background: url('../assets/images/backlist.webp');
+// 	height: 80vh;
+// }
 
 .logo {
 	height: 200px;
@@ -18,6 +57,8 @@ body {
 	h3 {
 		font-family: "Gloria Hallelujah", cursive;
 		font-weight: bolder;
-		color: rgb(173, 30, 97);
+		// color: rgb(173, 30, 97);
+		color:  #635a7c;;
+		// color: $titles;
 	}
 }

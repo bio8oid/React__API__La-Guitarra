@@ -38,19 +38,19 @@ class TabsList extends React.Component {
                 {paginatedItems.map(item => (
 
                     <div className="list-item" key={item.id}>
-                        <h3>{item.artist.name}</h3>
+                        <h2>{item.artist.name}</h2>
+                <p>{item.title}</p>
                         <div className="image-and-tags-wrapper">
                             {/* <img className="list-image" alt="thubnail" src={item.recipe.image} /> */}
-                <p>{item.title}</p>
                             <div className="list-ingredients-tags">
-                                {item.tabTypes.map((item, index) => (
-                                    <a key={index} className="tag" href="https://www.lidl.com/" target="blank">{item}</a>))}
+                                {item.tabTypes.map((tagItem, index) => (
+                                    <a key={index} className="tag" href={`http://www.songsterr.com/a/wa/song?id=${item.id}`} target="blank">{tagItem}</a>))}
                             </div>
                         </div>
                         {/* <a className="list-item-link" href={item.recipe.url} target="blank">link to recipe</a> */}
                     </div>))}
 
-                <div>
+                <div className="pagination-buttons">
                     {pageNumbers.map(id => {
                         return (
                             <button className="pagination-button" id={id} key={id} onClick={this.handlePage(id)}>{id}</button>
