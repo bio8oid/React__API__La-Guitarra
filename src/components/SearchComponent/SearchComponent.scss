@@ -4,7 +4,7 @@
 		justify-content: space-between;
 		align-items: center;
 		background: url("../../assets/images/paco.webp");
-		height: 675px;
+		height: 875px;
 		width: 100%;
 		background-position: center;
 		background-size: cover;
@@ -84,11 +84,17 @@
 }
 
 @media (max-width: 850px) {
-	.container-search .wrap-search {
-		flex-direction: column;
-	}
-	.container-search .header-search h1,
-	p {
-		display: none;
+	.container-search {
+		.wrap-search {
+			flex-direction: column;
+		}
+
+		.header-search {
+			h1,
+			h2,
+			p {
+				display: none;
+			}
+		}
 	}
 }
