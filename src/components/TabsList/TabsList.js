@@ -22,8 +22,6 @@ class TabsList extends React.Component {
 
     render() {
 
-        console.log(this.props.tabsList)
-
         const dataset = this.props.tabsList;
         const pageSet = this.state.page;
         const offset = (pageSet - 1) * 10
@@ -34,22 +32,17 @@ class TabsList extends React.Component {
         return (
 
             <div className="list-wrapper">
-
                 {paginatedItems.map(item => (
-
                     <div className="list-item" key={item.id}>
-                        <h3>{item.artist.name}</h3>
+                        <h2>{item.artist.name}</h2>
+                        <p>{item.title}</p>
                         <div className="image-and-tags-wrapper">
-                            {/* <img className="list-image" alt="thubnail" src={item.recipe.image} /> */}
-                <p>{item.title}</p>
                             <div className="list-ingredients-tags">
-                                {item.tabTypes.map((item, index) => (
-                                    <a key={index} className="tag" href="https://www.lidl.com/" target="blank">{item}</a>))}
+                                {item.tabTypes.map((type, index) => (
+                                    <a key={index} className="tag" href={`http://www.songsterr.com/a/wa/song?id=${item.id}`} target="blank">{type}</a>))}
                             </div>
                         </div>
-                        {/* <a className="list-item-link" href={item.recipe.url} target="blank">link to recipe</a> */}
                     </div>))}
-
                 <div>
                     {pageNumbers.map(id => {
                         return (
@@ -57,9 +50,8 @@ class TabsList extends React.Component {
                         );
                     })}
                 </div>
-
+                <div className="logo"><h3>© bio8oid</h3></div>
             </div>
-
         )
     }
 }

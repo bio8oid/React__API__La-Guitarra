@@ -1,16 +1,10 @@
 body {
 	margin: 0;
-	background: radial-gradient(
-		circle,
-		rgba(255, 253, 219, 1) 0%,
-		rgba(251, 237, 213, 1) 50%,
-		rgba(232, 200, 212, 1) 100%
-	);
 }
 
 .logo {
 	height: 200px;
-	margin-top: 260px;
+	margin-top: 180px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -18,6 +12,6 @@ body {
 	h3 {
 		font-family: "Gloria Hallelujah", cursive;
 		font-weight: bolder;
-		color: rgb(173, 30, 97);
+		color: #ad1e61;
 	}
 }

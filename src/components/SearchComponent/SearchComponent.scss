@@ -1,23 +1,34 @@
 .container-search {
-	margin-bottom: 10vh;
-
 	.header-search {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		background: url("../../assets/images/paco.webp");
+		height: 675px;
+		width: 100%;
+		background-position: center;
+		background-size: cover;
 
-		h1 {
+		h1,
+		p {
+			background: rgba(0, 0, 0, 0.5);
+			border-radius: 30px;
 			font-family: "Gloria Hallelujah", cursive;
+			color: #7c1043;
 			text-align: center;
 			font-weight: bolder;
-			font-size: 50px;
-			text-transform: uppercase;
-			color: rgb(173, 30, 97);
-			text-shadow: 5px 5px 15px rgba(104, 36, 47, 0.849);
+			font-size: 35px;
+			position: absolute;
+			top: 2%;
+			right: 2%;
+			width: 40%;
+			text-shadow: 0 0 15px #000;
+			box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.5);
 		}
 
-		.header-image {
-			max-width: 100%;
+		p {
+			margin-top: 180px;
+			font-size: 20px;
 		}
 	}
 
@@ -25,48 +36,44 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		box-shadow: 0 0 50px 50px #000;
+		background: #000;
+		padding: 50px;
+	}
+
+	input,
+	select {
+		width: 250px;
+		font-size: 20px;
+		border: 5px solid #7e0940;
+		padding: 10px;
+		border-radius: 10px;
+	}
+
+	select {
+		width: 120px;
 	}
 
 	.button-search {
 		height: 40px;
 		width: 120px;
 		margin: 50px;
-		background-color: rgb(173, 30, 97);
+		background-color: #7e0940;
 		color: #fff;
 		border: none;
 		border-radius: 5px;
-		box-shadow: 5px 5px 35px rgba(104, 36, 47, 0.849);
 
 		@media not all and (hover: none) {
 			&:hover {
-				background-color: rgb(126, 9, 64);
+				background-color: #ad1e61;
 			}
 		}
 	}
+}
 
-	input {
-		width: 150px;
-	}
-
-	.rs-wraper,
-	.rs-header,
-	.rs-toggle {
-		box-shadow: 5px 5px 35px rgba(104, 36, 47, 0.349);
-		border-radius: 10px !important;
-	}
-
-	.rs-header .rs-toggle .rs-selection {
-		font-size: 20px;
-	}
-
-	.rs-searchable {
-		margin: 10px;
-	}
-
-	#searchable,
-	.rs-body .rs-option {
-		font-size: 20px;
-		color: rgb(173, 30, 97);
+@media (max-width: 1350px) and (min-width: 1150px) {
+	.container-search .header-search p {
+		margin-top: 250px;
 	}
 }
 
@@ -79,5 +86,9 @@
 @media (max-width: 850px) {
 	.container-search .wrap-search {
 		flex-direction: column;
+	}
+	.container-search .header-search h1,
+	p {
+		display: none;
 	}
 }

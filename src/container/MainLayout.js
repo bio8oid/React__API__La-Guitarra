@@ -71,7 +71,6 @@ class MainLayout extends Component {
                 <SearchComponent onChange={e => this.handleChange(e)} 
                 onSubmit={e => { this.buttonHandle(e) }} />
                 <TabsList tabsList={this.state.tabsList} />
-                <div className="logo"><h3>© bio8oid</h3></div>
             </div>
         );
     }
