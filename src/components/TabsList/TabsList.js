@@ -39,17 +39,13 @@ class TabsList extends React.Component {
 
                     <div className="list-item" key={item.id}>
                         <h2>{item.artist.name}</h2>
-                <p>{item.title}</p>
-                        <div className="image-and-tags-wrapper">
-                            {/* <img className="list-image" alt="thubnail" src={item.recipe.image} /> */}
-                            <div className="list-ingredients-tags">
-                                {item.tabTypes.map((tagItem, index) => (
-                                    <a key={index} className="tag" href={`http://www.songsterr.com/a/wa/song?id=${item.id}`} target="blank">{tagItem}</a>))}
+                        <p>{item.title}</p>
+                        {/* <div className="image-and-tags-wrapper"> */}
+                            <div className="list-type-tags">
+                                {item.tabTypes.map((tagItem, index) => (<a key={index} className="tag" href={`http://www.songsterr.com/a/wa/song?id=${item.id}`} target="blank">{tagItem}</a>))}
                             </div>
-                        </div>
-                        {/* <a className="list-item-link" href={item.recipe.url} target="blank">link to recipe</a> */}
+                        {/* </div> */}
                     </div>))}
-
                 <div className="pagination-buttons">
                     {pageNumbers.map(id => {
                         return (
@@ -57,9 +53,7 @@ class TabsList extends React.Component {
                         );
                     })}
                 </div>
-
             </div>
-
         )
     }
 }

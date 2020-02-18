@@ -67,8 +67,8 @@ class SearchComponent extends Component {
             <div className="container-search">
                 <div className="header-search">   
                 <h1>The hands find the way to do what the heart wants to say</h1>
-                <p>- Paco de Lucia -</p>              
-                    {/* <img alt="hero" className="header-image" src="./images/paco.webp" /> */}
+                <p>- Paco de Lucia -</p>       
+                    <h2>FIND TABLATURE<br/>YOU NEED</h2> 
                 </div>
                 <div className="wrap-search">
                     <form onSubmit={this.props.onSubmit}>
