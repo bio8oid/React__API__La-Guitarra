@@ -12,10 +12,6 @@ const MainLayout = () => {
     const getList = async () => {
         const prefix = "https://cors-anywhere.herokuapp.com/";
         const url = "https://www.songsterr.com/a/ra/songs.json?pattern=";
-
-        console.log(inputData)
-        console.log(dropdownData)
-
         try {
             const res = await fetch(prefix + url + inputData);
             const data = await res.json();
@@ -40,9 +36,7 @@ const MainLayout = () => {
     }
 
     const handleChange = e => {
-
         const { name, value } = e.target;
-
         if (name === 'inputData') {
             setInputData(value);
         }
@@ -51,16 +45,13 @@ const MainLayout = () => {
         }
     }
 
-    // render() {
         return (
             <div className="main-component">
                 <SearchComponent onChange={e => handleChange(e)} 
                 onSubmit={e => { buttonHandle(e) }} />
                 <TabsList tabsList={tabsList} />
-                <div className="logo"><h3>© bio8oid</h3></div>
             </div>
         );
     }
-// }
 
 export default MainLayout;

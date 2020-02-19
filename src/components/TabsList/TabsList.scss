@@ -1,71 +1,38 @@
+@import "../../styles/variables.scss";
+
 .list-wrapper {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	// flex-wrap: wrap;
-	// background: #000;
-	// background-image: url('../../assets/images/backlist.webp');
-	// min-height: 180vh;
 	height: 100%;
-	
+
 	.list-item {
 		width: 60%;
-		// height: 20%;
 		background: #fff;
 		border-radius: 15px;
 		margin-bottom: 60px;
-		// box-shadow: $buttons-shadow;
-		box-shadow: 0 0 35px #0d091dd8;
-		color:  #49425d;;
+		color: $buttons-color;
 		text-align: center;
 		padding-bottom: 30px;
 
 		h2 {
 			text-decoration: underline;
-			// color: $titles;
-			// color: rgb(163, 87, 122);
-			// text-shadow: $buttons-shadow;
-			// text-shadow: 0px 0px 45px #68242fd8;
-			text-shadow: 0px 0px 45px #403c64d8;
+			text-shadow: $text-shadow;
 		}
-
-// 		p {
-// font-size: 20px;
-// 		}
 
 		.list-type-tags {
 			display: flex;
 			justify-content: center;
 			flex-wrap: wrap;
-			// width: 70%;
-		}
-
-		.list-item-link {
-			display: block;
-			text-align: center;
-			margin: 25px;
-			// color: $titles;
-			// color: rgb(173, 30, 97);
-			color:  #49425d;;
-			text-decoration: none;
-
-			@media not all and (hover: none) {
-				&:hover {
-					// color: $hover;
-					transform: translate(2px);
-				}
-			}
 		}
 	}
 
 	.list-item .tag,
 	.pagination-button {
-		// background: $buttons-color;
-		background:  #49425d;;
+		background: $buttons-color;
 		border-radius: 5px;
 		border: none;
-		// border: 1px solid #000;
 		padding: 0 10px;
 		margin: 10px;
 		line-height: 35px;
@@ -74,25 +41,21 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		text-align: center;
-		// box-shadow: $buttons-shadow;
-		// box-shadow: 5px 5px 35px #68242fd8;
 
 		@media not all and (hover: none) {
 			&:hover {
-				// background-color: $hover;
-				background-color: #6c6288;
+				background-color: $hover;
 			}
 		}
 	}
-		.pagination-buttons {
-			text-align: center;
-		}
-
+	.pagination-buttons {
+		text-align: center;
+	}
 }
 
 @media (max-width: 1350px) {
 	.list-wrapper {
-			margin-bottom: 30px;
+		margin-bottom: 30px;
 	}
 }
 

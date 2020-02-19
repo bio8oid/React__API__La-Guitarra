@@ -21,9 +21,7 @@ const TabsList = props => {
     return (
 
         <div className="list-wrapper">
-
             {paginatedItems.map(item => (
-
                 <div className="list-item" key={item.id}>
                     <h2>{item.artist.name}</h2>
                     <p>{item.title}</p>
@@ -38,6 +36,7 @@ const TabsList = props => {
                     );
                 })}
             </div>
+            <div className="logo"><h3>©bio8oid</h3></div>
         </div>
     )
 }

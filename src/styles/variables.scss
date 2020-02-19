@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+
 $buttons-color: #49425d;
-$buttons-shadow: #49425d;
-$hover: #49425d;
+$background: radial-gradient(circle, #190c25 0%, #312946 0%, #0a0313 40%);
+$wrap-search-shadow: 0 0 50px 50px #000;
+$text-shadow: 0px 0px 45px #403c64d8;
+$hover: #736a8a;
 $titles: #49425d;
 
 $font-merida: "Merienda One", cursive;
+$font-gloria: 'Abril Fatface', cursive;
 
 $phone: "(max-width: 367px)";
 $tablet: "(max-width: 768px)";
