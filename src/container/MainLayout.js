@@ -20,12 +20,12 @@ const MainLayout = () => {
             console.log(err);
         }
     }
-    
+
     const createTabsList = data => {
-        if (dropdownData !== "PLAYER"){
-        const filteredData = data.filter(x => x.tabTypes.find(x => x === dropdownData))
+        if (dropdownData !== "PLAYER") {
+            const filteredData = data.filter(x => x.tabTypes.find(x => x === dropdownData))
             setTabsList(filteredData);
-        }else{
+        } else {
             setTabsList(data);
         }
     }
@@ -45,13 +45,13 @@ const MainLayout = () => {
         }
     }
 
-        return (
-            <div className="main-component">
-                <SearchComponent onChange={e => handleChange(e)} 
+    return (
+        <div className="main-component">
+            <SearchComponent onChange={e => handleChange(e)}
                 onSubmit={e => { buttonHandle(e) }} />
-                <TabsList tabsList={tabsList} />
-            </div>
-        );
-    }
+            <TabsList tabsList={tabsList} />
+        </div>
+    );
+}
 
 export default MainLayout;

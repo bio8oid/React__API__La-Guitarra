@@ -1,8 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import RecipiesList from './RecipiesList';
-
+import TabsList from './TabsList';
 
 it('renders without crashing', () => {
-    shallow(<RecipiesList recipiesList={recipies}/>);
+    shallow(<TabsList tabsList={[]}/>);
 });
