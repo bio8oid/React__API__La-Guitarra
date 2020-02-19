@@ -8,14 +8,13 @@ class TabsList extends React.Component {
         tabsList: []
     }
 
-    handlePage = () => e => {
-        let id = e.target.id;
+    handlePage = id => e => {
         this.setState({ page: id });
     }
 
     static getDerivedStateFromProps(props, tabsList) {
         if (props.tabsList !== tabsList) {
-            return { tabsList: props.tabsList, page: 1 };
+            return { tabsList: props.tabsList };
         }
         else return tabsList;
     }
