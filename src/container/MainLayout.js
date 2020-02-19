@@ -43,26 +43,8 @@ class MainLayout extends Component {
     }
 
     handleChange = e => {
-        console.log(e.target)
-        // console.log(e.target.value)
-        // console.log(e.target.type)
-        // console.log(e.target.name)
-        // const value = e.target.value;
-        // const name = e.target.name;
-
         const { name, value } = e.target;
         this.setState({ [name]: value })
-
-        // return name === 'inputData' ? this.setState({ inputData: value }) :
-        // name === 'dropdownData' ? this.setState({ dropdownData: value }) : value;
-
-        // if (name === 'inputData') {
-        //     this.setState({ inputData: value });
-        // }
-        // if (name === 'dropdownData') {
-        //     this.setState({ dropdownData: value });
-        // }
-
     }
 
     render() {

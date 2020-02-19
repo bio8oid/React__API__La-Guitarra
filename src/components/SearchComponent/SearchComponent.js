@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './SearchComponent.scss';
 
-
 class SearchComponent extends Component {
 
     render() {

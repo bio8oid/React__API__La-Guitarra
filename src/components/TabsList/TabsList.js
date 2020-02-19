@@ -15,7 +15,7 @@ class TabsList extends React.Component {
 
     static getDerivedStateFromProps(props, tabsList) {
         if (props.tabsList !== tabsList) {
-            return { tabsList: props.tabsList };
+            return { tabsList: props.tabsList, page: 1 };
         }
         else return tabsList;
     }
