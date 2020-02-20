@@ -1,8 +1,8 @@
 ## React App to search guitar TABS basing on SONG or BAND name.
 
-#### [VIEW LIFE la Guitarra DEMO](https://tablature-search.netlify.com/)
+### [VIEW LIFE la Guitarra DEMO](https://tablature-search.netlify.com/)
 
-#### [VIEW LIFE la Guitarra DEMO (more colorful version)](https://guitarra-color.netlify.com)
+### [VIEW LIFE la Guitarra DEMO (more colorful version)](https://guitarra-color.netlify.com)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
