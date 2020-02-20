@@ -5,22 +5,20 @@ class TabsList extends React.Component {
 
     state = {
         page: 1,
-        tabsList: []
     }
 
     handlePage = id => e => {
         this.setState({ page: id });
     }
 
-    static getDerivedStateFromProps(props, tabsList) {
-        if (props.tabsList !== tabsList) {
-            return { tabsList: props.tabsList };
+    static getDerivedStateFromProps(props, prevState) {
+        if (props.tabsList !== prevState.tabsList) {
+            return { tabsList: props.tabsList, page: 1 };
         }
-        else return tabsList;
+        else return prevState;
     }
 
     render() {
-
         const dataset = this.props.tabsList;
         const pageSet = this.state.page;
         const offset = (pageSet - 1) * 10
@@ -28,21 +26,25 @@ class TabsList extends React.Component {
         const pages = Math.ceil(dataset.length / 10);
         const pageNumbers = Array.from({ length: pages }, (x, page) => ++page);
 
-        return (
-
-            <div className="list-wrapper">
-                {paginatedItems.map(item => (
+        let listItems = this.props.tabsList.length ?
+            (paginatedItems.map(item => {
+                return (
                     <div className="list-item" key={item.id}>
                         <h2>{item.artist.name}</h2>
                         <p>{item.title}</p>
-                        <div className="image-and-tags-wrapper">
-                            <div className="list-ingredients-tags">
-                                {item.tabTypes.map((type, index) => (
-                                    <a key={index} className="tag" href={`http://www.songsterr.com/a/wa/song?id=${item.id}`} target="blank">{type}</a>))}
-                            </div>
+                        <div className="list-tabtypes-tags">
+                            {item.tabTypes.map((type, index) => (
+                                <a key={index} className="tag" href={`http://www.songsterr.com/a/wa/song?id=${item.id}`} target="blank">{type}</a>))}
                         </div>
-                    </div>))}
-                <div>
+                    </div>)
+            })) :
+
+            (<div className="list-no-results"><h2>NO RESULTS</h2></div>)
+
+        return (
+            <div className="list-wrapper">
+                {listItems}
+                <div >
                     {pageNumbers.map(id => {
                         return (
                             <button className="pagination-button" id={id} key={id} onClick={this.handlePage(id)}>{id}</button>

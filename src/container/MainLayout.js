@@ -1,6 +1,7 @@
 import React,{Component} from "react";
 import SearchComponent from "../components/SearchComponent/SearchComponent";
 import TabsList from "../components/TabsList/TabsList";
+import axios from "axios"
 import './MainLayout.scss';
 
 class MainLayout extends Component {
@@ -14,13 +15,9 @@ class MainLayout extends Component {
     getList = async () => {
         const prefix = "https://cors-anywhere.herokuapp.com/";
         const url = "https://www.songsterr.com/a/ra/songs.json?pattern=";
-
-        console.log(this.state.inputData)
-        console.log(this.state.dropdownData)
-
         try {
-            const res = await fetch(prefix +  url + this.state.inputData);
-            const data = await res.json();
+            const res = await axios.get(prefix +  url + this.state.inputData);
+            const data = await res.data;
             this.createTabsList(data);
         } catch (err) {
             console.log(err);
@@ -30,7 +27,6 @@ class MainLayout extends Component {
     createTabsList = data => {
         if (this.state.dropdownData !== "PLAYER"){
         const filteredData = data.filter(x => x.tabTypes.find(x => x === this.state.dropdownData))
-        console.log(filteredData);
         this.setState({ tabsList: filteredData });
         }else{
             this.setState({ tabsList: data });

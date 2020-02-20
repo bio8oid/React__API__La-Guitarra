@@ -29,11 +29,16 @@
 			text-decoration: none;
 		}
 
-		.list-ingredients-tags {
+		.list-tabtypes-tags {
 			display: flex;
 			justify-content: center;
 			flex-wrap: wrap;
 		}
+	}
+
+	.list-no-results {
+		text-decoration: none;
+		color: #ad1e61;
 	}
 
 	.list-item .tag,
