@@ -8,6 +8,12 @@ class MainLayout extends Component {
 
     state = {
         tabsList: [],
+        // tabsList: [{
+        //         id: '',
+        //         title: "",
+        //     artist: { name: "No results..." },
+        //     tabTypes: []
+        // }],
         inputData: [],
         dropdownData: "PLAYER"
     }
