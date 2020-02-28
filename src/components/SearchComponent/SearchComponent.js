@@ -12,18 +12,14 @@ class SearchComponent extends Component {
                 </div>
                 <div className="wrap-search">
                     <form onSubmit={this.props.onSubmit}>
-                        <label>
-                            <input id="data-input" name="inputData" type="text" placeholder="Song or artist" autoComplete="on" onChange={this.props.onChange} />
-                        </label>
-                        <label>
-                            <select id="form-tabs" defaultValue="PLAYER" name="dropdownData" onChange={this.props.onChange}>
+                        <input id="data-input" name="inputData" type="text" placeholder="Song or artist" autoComplete="on" aria-label="data-input" onChange={this.props.onChange} />
+                        <select id="form-tabs" defaultValue="PLAYER" name="dropdownData" aria-label="dropdownData" onChange={this.props.onChange}>
                                 <option value="CHORDS">chords</option>
                                 <option value="TEXT_BASS_TAB">bass</option>
                                 <option value="TEXT_GUITAR_TAB">guitar</option>
                                 <option value="PLAYER">player</option>
                             </select>
-                        </label>
-                        <input className="button-search" type="submit" value="SEARCH" />
+                        <input className="button-search" type="submit" value="SEARCH" aria-label="submit"/>
                     </form>
                 </div>
             </div>
