@@ -12,18 +12,14 @@ const SearchComponent = props => {
             </div>
             <div className="wrap-search">
                 <form onSubmit={props.onSubmit}>
-                    <label>
-                        <input id="data-input" name="inputData" type="text" placeholder="Song title or artist" autoComplete="on" onChange={props.onChange} />
-                    </label>
-                    <label>
-                        <select id="form-tabs" defaultValue="PLAYER" name="dropdownData" onChange={props.onChange}>
+                    <input id="data-input" name="inputData" type="text" placeholder="Song title or artist" autoComplete="on" aria-label="data-input" onChange={props.onChange} />
+                    <select id="form-tabs" defaultValue="PLAYER" name="dropdownData" aria-label="dropdownData" onChange={props.onChange}>
                             <option value="CHORDS">chords</option>
                             <option value="TEXT_BASS_TAB">bass</option>
                             <option value="TEXT_GUITAR_TAB">guitar</option>
                             <option value="PLAYER">player</option>
                         </select>
-                    </label>
-                    <input className="button-search" type="submit" value="SEARCH" />
+                    <input className="button-search" type="submit" value="SEARCH" aria-label="submit"/>
                 </form>
             </div>
         </div>
