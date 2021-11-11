@@ -1,0 +1,104 @@
+@import "../../styles/variables.scss";
+
+.container-search {
+	.header-search {
+		background: url("../../assets/images/bw-paco.webp");
+		height: 875px;
+		width: 100%;
+		background-position: center;
+		background-size: cover;
+		color: $buttons-color;
+		text-align: center;
+
+		h1,
+		p {
+			font-family: $font-merida;
+			font-weight: bolder;
+			font-size: 35px;
+			position: absolute;
+			top: 2%;
+			left: 2%;
+			width: 30%;
+		}
+		p {
+			margin-top: 180px;
+			font-size: 20px;
+		}
+
+		h2 {
+			position: absolute;
+			top: 10%;
+			right: 10%;
+			font-size: 40px;
+			font-family: $font-gloria;
+		}
+	}
+
+	.wrap-search {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		box-shadow: $wrap-search-shadow;
+		background: #000;
+		padding: 50px;
+	}
+
+	input,
+	select {
+		width: 250px;
+		border: 5px solid $buttons-color;
+		padding: 10px;
+		border-radius: 10px;
+	}
+
+	select {
+		width: 120px;
+	}
+
+	.button-search {
+		height: 40px;
+		width: 120px;
+		margin: 50px;
+		background-color: $buttons-color;
+		color: #fff;
+		border: none;
+		border-radius: 5px;
+
+		@media not all and (hover: none) {
+			&:hover {
+				background-color: $hover;
+			}
+		}
+	}
+}
+
+@media (max-width: 1300px) {
+	.container-search .header-search h2 {
+		font-size: 35px;
+		right: 2%;
+	}
+}
+
+@media (max-width: 1150px) {
+	.container-search .header-search h1 {
+		font-size: 25px;
+	}
+}
+
+@media (max-width: 750px) {
+	.container-search {
+		.wrap-search {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.header-search {
+			h1,
+			h2,
+			p {
+				display: none;
+			}
+		}
+	}
+}

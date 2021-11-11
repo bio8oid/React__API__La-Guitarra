@@ -1,0 +1,20 @@
+@import "./../styles/variables.scss";
+
+body {
+	margin: 0;
+	background: $background;
+}
+
+.logo {
+	height: 200px;
+	margin-top: 260px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	h3 {
+		font-family: $font-merida;
+		font-weight: bolder;
+		color: $titles;
+	}
+}

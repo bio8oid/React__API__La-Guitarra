@@ -1,0 +1,68 @@
+@import "../../styles/variables.scss";
+
+.list-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+
+	.list-item {
+		width: 60%;
+		background: #fff;
+		border-radius: 15px;
+		margin-bottom: 60px;
+		color: $buttons-color;
+		text-align: center;
+		padding-bottom: 30px;
+
+		h2 {
+			text-decoration: underline;
+			text-shadow: $text-shadow;
+		}
+
+		.list-type-tags {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+	}
+
+	.list-item .tag,
+	.pagination-button {
+		background: $buttons-color;
+		border-radius: 5px;
+		border: none;
+		padding: 0 10px;
+		margin: 10px;
+		line-height: 35px;
+		font-size: 14px;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+
+		@media not all and (hover: none) {
+			&:hover {
+				background-color: $hover;
+			}
+		}
+	}
+	.pagination-buttons {
+		text-align: center;
+	}
+}
+
+@media (max-width: 1350px) {
+	.list-wrapper {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 850px) {
+	.list-wrapper {
+		.list-item {
+			width: 90%;
+		}
+	}
+}
