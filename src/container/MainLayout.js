@@ -8,18 +8,12 @@ class MainLayout extends Component {
 
     state = {
         tabsList: [],
-        // tabsList: [{
-        //         id: '',
-        //         title: "",
-        //     artist: { name: "No results..." },
-        //     tabTypes: []
-        // }],
         inputData: [],
         dropdownData: "PLAYER"
     }
 
     getList = async () => {
-        const prefix = "https://cors-anywhere.herokuapp.com/";
+        const prefix = "https://cors.harttle.com/";
         const url = "https://www.songsterr.com/a/ra/songs.json?pattern=";
         try {
             const res = await axios.get(prefix +  url + this.state.inputData);
