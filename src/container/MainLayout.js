@@ -10,7 +10,7 @@ const MainLayout = () => {
     const [dropdownData, setDropdownData] = useState("PLAYER");
 
     const getList = async () => {
-        const prefix = "https://cors-anywhere.herokuapp.com/";
+        const prefix = "https://cors.harttle.com/";
         const url = "https://www.songsterr.com/a/ra/songs.json?pattern=";
         try {
             const res = await fetch(prefix + url + inputData);
