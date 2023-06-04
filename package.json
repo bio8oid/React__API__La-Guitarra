@@ -37,5 +37,9 @@
   "devDependencies": {
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2"
+  },
+  "engines": {
+    "yarn": "1.x",
+    "node": "12.x"
   }
 }
